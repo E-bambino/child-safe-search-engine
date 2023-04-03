@@ -1,6 +1,10 @@
 <?php
 include_once 'includes/header.php';
 
+if (isset($_SESSION['parentId'])) {
+  header("location: /profile.php");
+}
+
 if (isset($_SESSION['justLoggedIn'])) {
   echo $justLoggedInAlert;
   unset($_SESSION['justLoggedIn']);
@@ -12,7 +16,6 @@ if (isset($_SESSION['passResetSuccess'])) {
 ?>
 
 <main>
-  
   <h1  class="tr">KIDS! LETS GET SAFE ONLINE</h1>
  
       <div>
@@ -110,12 +113,12 @@ if (isset($_SESSION['passResetSuccess'])) {
 		</div>
 		<div class="bbox" tabindex="0">
 			<img src="img/klein.jpeg" alt="Image 2" style="width:80px;height:80px;border-radius: 50%; margin-right: 20px;">
-      <div class=""><a href="bahati.html">Click to learn from Tech</a>.</div>
+      <div class=""><a href="klein.html">Click to learn from Tech</a>.</div>
 
 		</div>
 		<div class="bbox" tabindex="0">
 			<img src="img/meki.jpeg" alt="Image 3" style="width:80px;height:80px;border-radius: 50%; margin-right: 20px;">
-      <div class=""><a href="bahati.html">Click to learn from Safe</a>.</div>
+      <div class=""><a href="meki.html">Click to learn from Safe</a>.</div>
 
 		</div>
 	</div>
